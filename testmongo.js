@@ -32,7 +32,6 @@ app.get('/api/mongo/:item', function(req, res) {
 const client = new MongoClient(uri);
 const searchKey = "{ partID: '" + req.params.item + "' }";
 console.log("Looking for: " + searchKey);
-console.log(query); // ////////////////////////// TEST addition
 
 async function run() {
   try {
@@ -46,7 +45,6 @@ async function run() {
 
     const part = await parts.findOne(query);
     console.log(part);
-    console.log(query); // ////////////////////////// TEST addition
     res.send('Found this: ' + JSON.stringify(part));  //Use stringify to print a json
 
   } finally {
