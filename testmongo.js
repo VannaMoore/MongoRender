@@ -45,6 +45,7 @@ async function run() {
 
     const part = await parts.findOne(query);
     console.log(part);
+    console.log(query); // ////////////////////////// TEST addition
     res.send('Found this: ' + JSON.stringify(part));  //Use stringify to print a json
 
   } finally {
