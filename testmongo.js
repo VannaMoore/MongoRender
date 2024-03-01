@@ -35,7 +35,7 @@ console.log("Looking for: " + searchKey);
 
 async function run() {
   try {
-    const database = client.db('MongoNode');
+    const database = client.db('Node_Mongo');
     const parts = database.collection('Node_Mongo');
 
     // Hardwired Query for a part that has partID '12345'
